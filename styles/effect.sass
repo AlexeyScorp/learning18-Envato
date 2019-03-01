@@ -1,0 +1,119 @@
+#main_header #header_main_menu #main_header_menu_nav ul li
+
+  &:hover
+
+    a
+
+      color: #90d23d
+      text-shadow: 0 0 7px #fff
+      transition: 1s background
+      transform: scale(1.1)
+
+      &:after
+
+        content: ""
+        display: block
+        position: absolute
+        bottom: -10px
+        left: 0
+        width: 100%
+        height: 3px
+        background: #90d23d
+        transition: 0.5s all
+
+#main_header_register_box button,
+#contact_map #contact_map-information #contact_map-more #contact_map-button
+
+  &:hover
+
+    background: #4b4d4f
+    box-shadow: inset 0px 0px 20px 4px #90d23d
+    transition: 1s background
+
+#elite_rewards #elite_rewards-body button,
+#sponsors #sponsors-body #sponsors-button_us
+
+  &:hover
+
+    background: #fff
+    color: #4b4d4f
+    box-shadow: inset 0px 0px 20px 4px #90d23d
+    transition: 1s background
+
+#past_event #past_event-button,
+#contact_map #contact_map-information #contact_map-form button
+
+  &:hover
+
+    background: #90d23d
+    box-shadow: inset 0px 0px 20px 4px #4b4d4f
+    transition: 1s background
+
+
+
+footer #contact_map-ini a,
+footer #arrow_up a,
+#speakers #speakers-table a
+
+  &:hover
+
+    i
+
+      $a: 1
+      animation: swinging 3s ease-in-out 0s infinite
+      @keyframes swinging
+        @for $i from 0 through 5
+          $a: -$a
+          #{$i*5%}
+            transform: rotate(#{(25-$i*$i)*$a+deg})
+
+#event_table #event_table-wrap #event_table-more .icon_plus button:hover
+
+    i
+
+      display: block
+      animation: swinging 3s ease-in-out 0s infinite
+
+#main_header #header_main_menu #header_main_menu-logo_href:hover
+
+  $e: 1
+  animation: scaling 3s ease-in-out 0s infinite
+  @keyframes scaling
+    @for $t from 0 through 10
+      $e: -$e
+      #{$t*5%}
+        transform: scale(#{($e/-10)+1})
+
+#speakers #speakers-table .speakers-cell
+
+  &:hover
+
+    background-image: url("../images/noisy-texture.png")
+
+    & .speakers-url
+
+      visibility: visible
+
+    & h5:after
+
+      transition: 0.5s width
+      width: 100%
+
+#main_header_register_box input,
+#contact_map #contact_map-information #contact_map-form input,
+#contact_map #contact_map-information #contact_map-form textarea
+
+  &:hover
+
+    border: 2px solid #90d23d
+    box-shadow: inset 0 0 20px #4b4d4f
+
+  &:active
+
+    border: 2px solid #3d6ed2
+    box-shadow: inset 0 0 20px #90d23d
+
+  &:focus
+
+    border: 2px solid #90d23d
+    box-shadow: inset 0 0 20px #90d23d

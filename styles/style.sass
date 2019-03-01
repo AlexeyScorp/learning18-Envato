@@ -1,0 +1,981 @@
+@import "font"
+@import "effect"
+
+$static_width: 1170px
+
+body
+
+  margin: 0 auto
+  padding: 0
+
+#container
+
+  max-width: 1333px
+  overflow: hidden
+  position: relative
+  @extend body
+
+  @media screen and (max-width: $static_width)
+
+    overflow: visible
+    min-width: $static_width
+
+.body_container
+
+  width: 1170px
+  margin: 0 auto
+
+.body_container_small
+
+  position: relative
+  width: 1030px
+  margin: 0 auto
+
+  &:after
+
+    content: ""
+    display: block
+    clear: both
+
+header
+
+#main_header
+
+  min-height: 493px
+  margin: 0 auto
+  padding: 46px 0 0
+  background: #4a454b
+
+  #header_main_menu
+
+    position: relative
+    box-sizing: border-box
+    height: 59px
+    width: 100%
+    margin: 0
+    padding: 0 72px
+
+    #header_main_menu-logo_href
+
+      display: inline-block
+      width: 232px
+
+    #main_header_menu_logo
+
+      display: inline-block
+      position: relative
+
+      &:before
+
+        content: ""
+        display: inline-block
+        width: 54px
+        height: 59px
+        background: url("../images/logo.svg")
+
+      span
+
+        position: absolute
+        top: 38px
+        left: 66px
+        font-family: RobotoSlab-Regular
+        text-transform: uppercase
+        color: #82b541
+        font-size: 17.99px
+        font-weight: 400
+        letter-spacing: 4.5px
+
+
+        &:before
+
+          content: ""
+          display: inline-block
+          position: absolute
+          margin: -41px -1px
+          width: 165px
+          height: 37px
+          background: url("../images/logo_name.svg")
+
+        &:after
+
+          content: ""
+          display: block
+          width: 100%
+          height: 1px
+
+    #main_header_menu_nav
+
+      display: inline-block
+      float: right
+
+      ul
+
+        min-width: 581px
+        display: flex
+        justify-content: space-between
+        list-style: none
+        padding: 0
+        margin: 20px 0 0
+
+        li
+
+          display: inline-block
+          font-family: Roboto-Thin
+          text-transform: uppercase
+          text-decoration: none
+          color: #fff
+          font-size: 15px
+          font-weight: 100
+          text-align: left
+
+          a
+
+            @extend li
+
+            &:after
+
+              content: ""
+              display: block
+              position: absolute
+              bottom: -10px
+              width: 0
+              left: 50%
+              height: 3px
+              background: #90d23d
+
+  #main_header_timer_wrap
+
+    position: relative
+    box-sizing: border-box
+    display: flex
+    width: 972px
+    height: 198px
+    padding: 22px 28px
+    justify-content: space-around
+    margin: 118px auto 0
+    border-radius: 20px
+    border: 2px solid #90d23d
+
+    div
+
+      position: relative
+
+    div:nth-child(1):after,
+    div:nth-child(2):after,
+    div:nth-child(3):after
+      content: ":"
+      position: absolute
+      font-family: RobotoSlab-Thin
+      font-size: 130px
+      font-weight: 100
+      color: #fff
+      text-transform: uppercase
+      top: -25px
+      right: -39%
+
+    span
+
+      display: block
+      color: #fff
+      text-transform: uppercase
+
+    .name_timer
+      margin-top: 20px
+      font-family: RobotoSlab-Regular
+      font-size: 25px
+      font-weight: 400
+      text-align: center
+
+    .import_timer
+      width: 140px
+      font-family: RobotoSlab-Thin
+      font-size: 130px
+      font-weight: 100
+      line-height: 0.8
+
+
+.main_header_yes_border
+
+  position: relative
+  display: flex
+  justify-content: center
+  overflow: hidden
+  background: #4a454b
+  height: 228px
+
+  #main_header_hero_shot
+
+    position: relative
+    left: -143px
+
+    & img:nth-child(1)
+
+      top: 72px
+      transform: rotate(-21deg)
+      z-index: 6
+
+    & img:nth-child(2)
+
+      left: -41px
+      top: 53px
+      z-index: 5
+
+    & img:nth-child(3)
+
+      left: -87px
+      top: 39px
+      z-index: 4
+
+    & img:nth-child(4)
+
+      left: -115px
+      top: 27px
+      z-index: 3
+
+    & img:nth-child(5)
+
+      left: -146px
+      top: 20px
+      transform: rotate(7deg)
+      z-index: 2
+
+    img
+      display: inline-block
+      position: relative
+      width: 162px
+      height: 155px
+
+.main_header_border
+  position: absolute
+  bottom: 0
+  border-bottom: 119px solid #ffffff
+  border-left: 1366px solid transparent
+  z-index: 7
+
+#main_header_welcome
+
+  float: left
+  width: 527px
+  padding-top: 50px
+
+#main_header_register_box
+
+  position: absolute
+  box-sizing: border-box
+  padding: 33px 0 0
+  right: -3px
+  margin-top: -228px
+  width: 431px
+  height: 530px
+  background: #fff
+  box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65)
+  z-index: 8
+
+  input
+
+    box-sizing: border-box
+    display: block
+    width: 372px
+    height: 54px
+    margin: 0 auto 19px
+    padding: 3px 0 0 13px
+    overflow: hidden
+    border-radius: 5px
+    border: 1px solid #90d23d
+    outline: none
+    background-color: #fff
+
+  button
+
+    box-sizing: border-box
+    display: block
+    margin: 42px auto 19px
+    width: 371px
+    height: 57px
+    border-radius: 5px
+    background-color: #90d23d
+    text-align: center
+    border: none
+    box-shadow: none
+    cursor: pointer
+
+  p
+    color: #6c6c6c
+    font-size: 15px
+    text-align: center
+
+#our_advantages
+
+  height: 550px
+
+  #our_advantages-wrap
+
+    display: flex
+    justify-content: space-between
+
+    & div:nth-child(-n+3)
+
+      display: inline-block
+      margin: 118px 0
+      width: 30%
+      height: 380px
+
+    img
+
+      display: block
+      margin: 0 auto
+
+    p
+
+      text-align: center
+
+#event_table
+
+  p
+    width: 830px
+    margin: 0 auto
+    text-align: center
+
+  #event_table-wrap
+
+    width: 1030px
+    height: 375px
+    overflow: hidden
+    margin: 38px auto
+    border-radius: 15px
+    background-color:  #a3cc40
+
+    #event_table-time
+
+      float: left
+      width: 22%
+      height: 100%
+      text-align: center
+
+    #event_table-happen
+
+      float: left
+      width: 67%
+      height: 100%
+
+      span
+
+        box-sizing: border-box
+        padding-left: 74px
+
+    #event_table-more
+
+      position: relative
+      float: left
+      width: 11%
+      height: 100%
+
+      .icon_plus
+
+        button
+
+          width: 33px
+          height: 33px
+          font-family: Roboto-Black, Roboto, SansSerif
+          background: none
+          color: #fff
+          border-radius: 50%
+          border: none
+          outline: none
+          font-size: 33px
+          padding: 0
+          margin: 16px 0 0 26px
+          cursor: pointer
+          //line-height: 33px
+
+
+    div
+
+      div,
+      span
+        display: block
+        height: 75px
+        width: 100%
+        font-family: Roboto-Regular, Roboto, SansSerif
+        color: #fff
+        font-size: 22px
+        font-weight: 400
+        line-height: 76px
+
+      & span:first-child
+
+        font-family: Roboto-Black, Roboto, SansSerif
+        font-size: 30px
+
+      & div:nth-child(2n+3),
+      & span:nth-child(2n+3)
+
+        background: #4b4d4f
+
+      & div:nth-child(even),
+      & span:nth-child(even)
+
+        background: #373737
+
+#elite_rewards
+
+  position: relative
+  height: 780px
+  margin: 85px auto 0
+
+  &:before
+
+    content: ""
+    display: block
+    height: 1px
+    clear: both
+
+
+  #elite_rewards-logo
+
+    background: url("../images/elite_badge.svg") no-repeat
+    width: 354px
+    height: 357px
+    position: absolute
+    z-index: 8
+    margin-left: 75px
+
+    &:after
+
+      content: ""
+      display: block
+      clear: both
+
+  .yes_border-top
+
+    margin-top: 74px
+
+  #elite_rewards-body
+
+    box-sizing: border-box
+    padding: 52px 0 36px
+    background: #4a454b
+    text-align: right
+
+    h2
+
+      color: #fff
+      padding-bottom: 11px
+
+    p
+
+      display: inline-block
+      width: 670px
+      text-align: right
+      color: #fff
+
+    button
+
+      display: block
+      width: 200px
+      height: 55px
+      margin: 17px 0 17px auto
+      border-radius: 15px
+      background-color:  #90d23d
+      outline: none
+      border: none
+      font-family: Roboto-Regular, Roboto, SansSerif
+      color:  #ffffff
+      font-size: 18px
+      cursor: pointer
+
+#speakers
+
+  box-sizing: border-box
+  padding: 138px 30px
+
+  h2
+
+    padding-bottom: 10px
+
+  p
+    width: 575px
+
+  #speakers-table
+
+    width: 100%
+    height: 970px
+    position: relative
+    padding-top: 42px
+    display: flex
+    justify-content: space-between
+    align-content: space-between
+    flex-wrap: wrap
+
+    .speakers-cell
+
+      display: inline-block
+      position: relative
+      padding: 32px 32px 23px
+      box-sizing: border-box
+      width: 296px
+      height: 296px
+      background: #90d23d
+      border-radius: 15px
+      float: left
+
+    h5
+
+      margin: 0 0 14px
+
+      &:after
+
+        content: ""
+        display: block
+        margin-top: 10px
+        background-color: #fff
+        width: 83px
+        height: 6px
+        transition: 0.5s width
+
+    .speakers-p
+
+      display: inline
+      font-family: Roboto-Medium, Roboto, SansSerif
+      color:  #fefefe
+      font-size: 18px
+      font-weight: 500
+      text-align: left
+
+    .speakers-url
+
+      visibility: hidden
+      position: absolute
+      bottom: 19px
+
+    a
+
+      font-size: 31px
+      color: #fff
+      text-decoration: none
+      display: inline-block
+      width: 33px
+      height: 33px
+      margin-right: 3px
+
+      i
+
+        position: absolute
+        top: 2px
+        line-height: 0.95
+
+    #logo_speakers-parent
+
+      display: inline-block
+      position: relative
+      padding: 32px 32px 23px
+      box-sizing: border-box
+      width: 296px
+      height: 296px
+      background: #90d23d
+      border-radius: 15px
+      float: left
+      background: transparent
+
+      #logo_speakers-wrap
+
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+        width: 232px
+        height: 232px
+
+        img
+
+          margin: auto
+
+#sponsors
+
+  margin-top: 43px
+  min-height: 700px
+
+  #sponsors-body
+
+    box-sizing: border-box
+    padding: 45px 0 7px
+    background: #4a454b
+    text-align: right
+    color: #fff
+
+    h2, p
+
+      text-align: center
+
+    h2
+
+      margin-bottom: 33px
+
+    p
+
+      width: 630px
+      margin-left: auto
+      margin-right: auto
+
+    #sponsors-table_img
+
+      position: relative
+      margin: 43px auto 54px
+      height: 90px
+      width: 657px
+
+      .sponsor-cell_wrap
+
+        position: relative
+        display: table
+        width: 219px
+        float: left
+        height: 100%
+
+        .sponsor-cell_contend
+
+          display: table-cell
+          text-align: center
+          vertical-align: middle
+
+          #sponsor-logo_image
+
+            img
+
+              margin: 0 3px
+              height: 28px
+
+
+    #sponsors-button_us
+
+      display: block
+      width: 200px
+      height: 55px
+      margin: 17px auto 0
+      border-radius: 15px
+      background-color:  #90d23d
+      outline: none
+      border: none
+      font-family: Roboto-Regular, Roboto, SansSerif
+      color:  #ffffff
+      font-size: 22px
+      cursor: pointer
+
+#past_event
+
+  padding: 110px 0 92px
+
+  #past_event-caption
+
+    box-sizing: border-box
+    padding: 0 29px
+
+    p
+
+      width: 600px
+      padding-top: 10px
+
+  #past_event-table
+
+    position: relative
+    margin: 0 auto
+    padding: 82px 0 0
+    max-width: 1170px
+
+    &:after
+
+      content: ""
+      display: block
+      clear: both
+
+    .past_event-cell
+
+      float: left
+
+      &:nth-child(4n+1)
+
+        width: 51.283%
+        height: 416px
+        background: #3d6ed2
+
+      &:nth-child(4n+2)
+
+        width: 48.718%
+        height: 416px
+        background: #90d23d
+
+      &:nth-child(4n+3)
+
+        width: 42.736%
+        height: 366px
+        background: #ff9d00
+
+      &:nth-child(4n+4)
+
+        width: 57.265%
+        height: 366px
+        background: #e0652a
+
+  #past_event-button
+
+    display: block
+    margin: 100px auto 0
+    border-radius: 15px
+    background-color: #373737
+    width: 200px
+    height: 55px
+    font-family: Roboto-Regular, Roboto, SansSerif
+    color:  #fff
+    font-size: 22px
+    font-weight: 400
+    text-align: center
+    outline: none
+    border: none
+    cursor: pointer
+
+#contact_map
+
+  position: relative
+  height: 660px
+
+  .contact_map-map_active
+
+    visibility: hidden
+
+  #contact_map-map
+
+    position: absolute
+    z-index: 5
+    width: 100%
+
+    #contact_map-map_no_active
+
+      position: absolute
+      z-index: 6
+      width: 100%
+      height: 100%
+      background: fade_out(#373737,0.5)
+
+  #contact_map-information
+
+    position: absolute
+    z-index: 10
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    background-color: #fff
+    box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65)
+    width: 970px
+    height: 530px
+
+    #contact_map-more
+
+      width: 50%
+      height: 100%
+      box-sizing: border-box
+      padding: 58px 17px
+      float: left
+
+      .contact_map-icon
+
+        background: url("../images/contact_icon.png")
+        background-size: cover
+        margin: 38px auto 46px
+        width: 132px
+        height: 140px
+
+
+      p
+
+        width: 260px
+        margin: 0 auto
+        color:  #454444
+        font-size: 18px
+        text-align: center
+
+      #contact_map-button
+
+        display: block
+        margin: 31px auto
+        border-radius: 15px
+        background-color:  #90d23d
+        width: 200px
+        height: 55px
+        font-family: Roboto-Regular, Roboto, SansSerif
+        color: #fff
+        font-size: 22px
+        font-weight: 400
+        text-align: center
+        outline: none
+        border: none
+        cursor: pointer
+
+      .active_map_button
+
+        visibility: visible
+        position: absolute
+        bottom: -70px
+        left: -70px
+
+    #contact_map-form
+
+      @extend #contact_map-more
+
+      input,
+      textarea
+
+        border-radius: 5px
+        border: 1px solid #bebebe
+        background: #fff
+        width: 399px
+        outline: none
+        box-sizing: border-box
+        padding: 3px 0 0 13px
+        min-height: 53px
+        margin: 0 0 28px
+
+      textarea
+
+        resize: none
+        height: 250px
+        padding-top: 13px
+
+      button
+
+        border-radius: 5px
+        background-color: #373737
+        width: 399px
+        height: 60px
+        font-family: Roboto-Regular, Roboto, SansSerif
+        color: #fff
+        font-size: 22px
+        font-weight: 400
+        text-align: center
+        border: none
+        outline: none
+        margin: -4px auto 0
+        cursor: pointer
+
+footer
+
+  height: 220px
+  background: #90d23d
+
+  #contact_map-ini
+
+    padding: 60px 0
+    text-align: center
+    position: relative
+
+    a
+
+      position: relative
+      font-size: 44px
+      color: #fff
+      text-decoration: none
+      display: inline-block
+      width: 45px
+      height: 45px
+      margin-right: 11px
+
+      &:nth-child(5)
+
+        margin-right: 0
+
+    i
+
+      position: absolute
+      top: 1px
+      left: 0
+      line-height: 0.95
+
+    p
+
+      margin: 28px auto 0
+      width: 380px
+      color: #fff
+      font-size: 18px
+      text-align: center
+
+  .arrow_up-fixed
+
+    position: fixed
+    background: #4a454b
+    border-radius: 50%
+    padding: 3px 4px 1px 4px
+    margin-right: 100px
+    z-index: 50
+    box-shadow: 0 0 10px #4a454b
+
+  .arrow_up-footer
+
+    position: absolute
+
+  #arrow_up
+
+    right: -10px
+    top: 60px
+
+    a
+
+      position: relative
+      font-size: 45px
+      color: #fff
+      text-decoration: none
+      display: inline-block
+      width: 45px
+      height: 45px
+
+    i
+
+      position: absolute
+      top: 1px
+      left: 0
+      line-height: 0.95
+
+.yes_border-top
+
+  position: relative
+  display: flex
+  justify-content: center
+  overflow: hidden
+  background: #4a454b
+  height: 119px
+
+.yes_border-button
+
+  position: relative
+  display: flex
+  justify-content: center
+  overflow: hidden
+  background: #4a454b
+  height: 119px
+
+.border_top-border
+  position: absolute
+  bottom: 0
+  border-top: 119px solid #ffffff
+  border-right: 1366px solid transparent
+  z-index: 7
+
+.border_button-border
+  position: absolute
+  bottom: 0
+  border-bottom: 119px solid #ffffff
+  border-left: 1366px solid transparent
+  z-index: 7
+
+
+
+//#main_header_no_border
+
+  height: 541px
+
+//#main_header_yes_border
+
+  border-top: 100px solid red
+  border-right: 100px solid transparent
